@@ -4,7 +4,6 @@ def agregar_producto(codigo, nombre, precio, cantidad):
     with open ('productos.csv','a',newline='')as csvfile:
         writer = csv.writer(csvfile)
         writer.writerow([codigo,producto, precio, cantidad])
-datos.insert(0, ['codigo','producto','precio','cantidad'])
 
 while True:
     producto = input("Ingrese el nombre")
