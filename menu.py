@@ -1,6 +1,25 @@
 #Biblioteca
 import time as tiempo
 
+import csv
+lista_productos=[]
+def agregar_productos():    
+    producto=input("Ingrese el nuevo producto")
+    lista_productos.append(producto)
+    print(lista_productos)
+
+def mostrar_productos():
+    print("")
+
+def mod_producto():
+    producto=input("Ingrese el producto a modificar")
+    producto_nuevo=input("Ingrese el nuevo producto\n")
+    modificar=lista_productos.index(producto)
+    lista_productos[modificar]=producto_nuevo
+    print(f"El producto {producto} a sido modificado e intercambiado por {producto_nuevo}")
+
+def borrar_producto():
+    producto=input("Ingrese el producto")
 #Menu
 while True:
     print("\nInventario Tienda");
@@ -11,11 +30,13 @@ while True:
         print("\nDebe ingresar un numero del 1 al 6.")
 #Opcion 1
     if opcion==1:
-        print("\n¿Que producto desea agregar al iventario de la lista?")
-        agregar_producto=input("Ingrese el producto: ")
+        print("\nUsted ingreso la opcion de agregar producto.")
+        producto=input("Ingrese el nuevo producto: ")
+        lista_productos.append(producto)
+        print(lista_productos)
 #Opcion 2
     elif opcion==2:
-        print("coleccion")
+        print(lista_productos)
 #Opcion 3
     elif opcion==3:
         print("Usted ingreso a la opcion de modificar un producto.")
